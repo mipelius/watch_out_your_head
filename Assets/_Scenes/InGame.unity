@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 264193795}
   m_Layer: 9
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,9 +402,10 @@ GameObject:
   m_Component:
   - component: {fileID: 273899711}
   - component: {fileID: 273899712}
+  - component: {fileID: 273899713}
   m_Layer: 8
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: PlayerHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -463,6 +464,21 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!58 &273899713
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 273899710}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.003757278, y: 0.9498111}
+  serializedVersion: 2
+  m_Radius: 0.9723719
 --- !u!1 &289305694
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +492,7 @@ GameObject:
   - component: {fileID: 289305695}
   m_Layer: 9
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -956,7 +972,7 @@ GameObject:
   - component: {fileID: 784338318}
   m_Layer: 9
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1073,7 +1089,7 @@ GameObject:
   - component: {fileID: 828542872}
   m_Layer: 9
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1407,7 +1423,7 @@ GameObject:
   - component: {fileID: 1510482432}
   m_Layer: 9
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1660,7 +1676,7 @@ GameObject:
   - component: {fileID: 1578634025}
   m_Layer: 9
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1829,7 +1845,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09937453, y: -0.23233867}
+  m_Offset: {x: 0.09937453, y: -1.306516}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1840,7 +1856,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.240149, y: 7.5178304}
+  m_Size: {x: 2.240149, y: 5.3694754}
   m_EdgeRadius: 0
 --- !u!50 &1588319458
 Rigidbody2D:
@@ -1904,7 +1920,7 @@ GameObject:
   - component: {fileID: 1686593313}
   m_Layer: 9
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

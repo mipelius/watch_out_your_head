@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization.Formatters;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CollapsingBrick : MonoBehaviour {
 	public float fallDelay = 1.0f;

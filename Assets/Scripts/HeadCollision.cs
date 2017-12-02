@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class HeadCollision : MonoBehaviour
 {
     public GameObject head;
+    public GameObject bloodBurstPrefab;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,6 +16,12 @@ public class HeadCollision : MonoBehaviour
         )
         {
             head.SetActive(false);
+            Instantiate(
+                bloodBurstPrefab, 
+                head.transform.position, 
+                Quaternion.identity
+            );
+            
             Invoke("Restart", 2.0f);
         }
     }

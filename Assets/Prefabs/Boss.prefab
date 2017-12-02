@@ -617,7 +617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 365
   maxSpeed: 2
-  jumpForce: 6000
+  jumpForce: 8000
   groundCheck: {fileID: 4173283766536776}
   horizontalMovement: 1
 --- !u!114 &114235415114023892
@@ -634,7 +634,8 @@ MonoBehaviour:
   throwableCoinPrefab: {fileID: 1983141158931358, guid: 134c74b4586af468f8661fd63b8b7697,
     type: 2}
   coinThrowInterval: 1
-  throwForce: 100
+  kickForce: 10000
+  throwForce: 1000
   target: {fileID: 0}
 --- !u!114 &114759895511977086
 MonoBehaviour:

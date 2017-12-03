@@ -16,6 +16,7 @@ public class GameObjectActivator : MonoBehaviour
 			foreach (var obj in objectsToActivate) {
 				obj.SetActive(true);
 			}
+			Destroy(gameObject);
 		}
 	}
 }

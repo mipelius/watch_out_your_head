@@ -7954,6 +7954,7 @@ MonoBehaviour:
   jumpForce: 8000
   brakeForce: 10
   groundCheck: {fileID: 1560067176}
+  grounded: 0
   horizontalMovement: 1
 --- !u!61 &644209045
 BoxCollider2D:
@@ -20034,6 +20035,21 @@ Prefab:
       propertyPath: brakeForce
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114890868932543828, guid: 50b33422b39444f5b872097d48141c27,
+        type: 2}
+      propertyPath: coinPickupClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fb8d35478ab274b408f7665718578956, type: 3}
+    - target: {fileID: 114502612508536044, guid: 50b33422b39444f5b872097d48141c27,
+        type: 2}
+      propertyPath: headExplosionClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 53b6618c6a0eb4a1db4651840d02c390, type: 3}
+    - target: {fileID: 114563716337390694, guid: 50b33422b39444f5b872097d48141c27,
+        type: 2}
+      propertyPath: jumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c7d1ba7ce682142cf898c710725fab7d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50b33422b39444f5b872097d48141c27, type: 2}
   m_IsPrefabParent: 0

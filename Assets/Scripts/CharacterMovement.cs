@@ -11,19 +11,21 @@ public class CharacterMovement : MonoBehaviour {
 	public float brakeForce = 10f;
 	public Transform groundCheck;
 	
-	private bool grounded = false;
+	public bool grounded = false;
 	private Animator anim;
 	private Rigidbody2D rb2d;
 
 	public float horizontalMovement;
 	
-	public void Jump()
+	public bool Jump()
 	{
 		grounded = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
 		
 		if (grounded) {
 			jump = true;
+			return true;
 		}
+		return false;
 	}
 
 	public void Brake()

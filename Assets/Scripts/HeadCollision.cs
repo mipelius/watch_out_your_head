@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class HeadCollision : MonoBehaviour
 {
     public GameObject head;
     public GameObject bloodBurstPrefab;
+
+    public AudioClip headExplosionClip;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,6 +15,8 @@ public class HeadCollision : MonoBehaviour
             collision.otherCollider.CompareTag("PlayerHead")
         )
         {
+            AudioManager.instance.PlaySingle(headExplosionClip);
+            
             head.SetActive(false);
             Instantiate(
                 bloodBurstPrefab, 

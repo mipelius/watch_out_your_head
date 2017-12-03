@@ -2,7 +2,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
+	public AudioClip jumpClip;
 
 	private CharacterMovement characterMovement;
 	
@@ -17,29 +19,17 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update ()
 	{
-		if (Input.GetKeyDown(KeyCode.Z))
+		if (Input.GetKeyDown(KeyCode.Tab))
 		{
 			SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex));			
-		}
-	
-		// CHEAT
-		
-		if (Input.GetKeyDown(KeyCode.X))
-		{
-			transform.position = new Vector3(156f, 9.3f, 0f);
-		}
-		if (Input.GetKeyDown(KeyCode.C))
-		{
-			transform.position = new Vector3(77.1f, 70.2f, 0f);
-		}
-		if (Input.GetKeyDown(KeyCode.V))
-		{			
-			transform.position = new Vector3(-53.6f, 70.3f, 0f);
 		}
 		
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			characterMovement.Jump();
+			if (characterMovement.Jump())
+			{
+				AudioManager.instance.PlaySingle(jumpClip);
+			};
 		}
 	}
 

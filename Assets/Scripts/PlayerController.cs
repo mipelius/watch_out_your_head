@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
@@ -41,7 +42,32 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		characterMovement.horizontalMovement = Input.GetAxis("Horizontal"); 
-	}
-	
+		//float h = Input.GetAxis("Horizontal");
+
+		float h = 0;
+		
+		if (
+			Input.GetKey(KeyCode.A) || 
+			Input.GetKey(KeyCode.LeftArrow)
+		)
+		{
+			h -= 1.0f;
+		}
+		if (
+			Input.GetKey(KeyCode.D) || 
+			Input.GetKey(KeyCode.RightArrow)
+		)
+		{
+			h += 1.0f;
+		}
+
+		Debug.Log(h);
+		
+		characterMovement.horizontalMovement = h;
+		
+		if (Mathf.Abs(h) < Mathf.Epsilon) 
+		{
+			characterMovement.Brake();
+		}		
+	}	
 }

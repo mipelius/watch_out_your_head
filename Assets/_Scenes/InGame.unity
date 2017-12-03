@@ -19122,11 +19122,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4168751784614830, guid: 50b33422b39444f5b872097d48141c27, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 253
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 4168751784614830, guid: 50b33422b39444f5b872097d48141c27, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 159
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4168751784614830, guid: 50b33422b39444f5b872097d48141c27, type: 2}
       propertyPath: m_LocalPosition.z
@@ -19155,6 +19155,26 @@ Prefab:
     - target: {fileID: 4635289445523648, guid: 50b33422b39444f5b872097d48141c27, type: 2}
       propertyPath: m_LocalPosition.y
       value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61294114802734802, guid: 50b33422b39444f5b872097d48141c27,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114533879760916178, guid: 50b33422b39444f5b872097d48141c27,
+        type: 2}
+      propertyPath: moveForce
+      value: 365
+      objectReference: {fileID: 0}
+    - target: {fileID: 114533879760916178, guid: 50b33422b39444f5b872097d48141c27,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114533879760916178, guid: 50b33422b39444f5b872097d48141c27,
+        type: 2}
+      propertyPath: brakeForce
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50b33422b39444f5b872097d48141c27, type: 2}

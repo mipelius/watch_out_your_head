@@ -8,6 +8,11 @@ public class StartOptions : MonoBehaviour {
 	[HideInInspector] public Animator animColorFade;
 	[HideInInspector] public Animator animMenuAlpha;
 	public AnimationClip fadeColorAnimationClip;
+
+	void Awake()
+	{
+		Cursor.visible = true;
+	}
 	
 	public void StartButtonClicked()
 	{

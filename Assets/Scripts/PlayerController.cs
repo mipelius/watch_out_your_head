@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 	
 	void Awake ()
 	{
+		Cursor.visible = false;
+		
 		characterMovement = GetComponent<CharacterMovement>();
 		if (CheckPointManager.instance.checkPointIsSet())
 		{
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour
 			if (characterMovement.Jump())
 			{
 				AudioManager.instance.PlaySingle(jumpClip);
-			};
+			}
 		}
 	}
 

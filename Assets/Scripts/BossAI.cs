@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossAI : MonoBehaviour
 {
@@ -83,7 +84,10 @@ public class BossAI : MonoBehaviour
 
 	private void Victory()
 	{
-		Debug.Log("VICTORY"); // TODO
+		if (target.GetComponent<HeadCollision>().head.gameObject.activeSelf)
+		{
+			SceneManager.LoadScene("VictoryScreen");
+		}
 	}
 
 	private void CoinBurst(int coins, float distanceFromPivot)

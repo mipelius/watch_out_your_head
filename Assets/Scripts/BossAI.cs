@@ -9,6 +9,8 @@ public class BossAI : MonoBehaviour
 	public float kickForce = 2000f;
 	
 	public float throwForce = 1000f;
+
+	public float anticipation = 20f;
 	
 	private float coinThrowTimestamp;
 
@@ -26,13 +28,19 @@ public class BossAI : MonoBehaviour
 			
 			GameObject coin = Instantiate(
 				throwableCoinPrefab, 
-				transform.position + new Vector3(0f, 2f, 0f), 
+				transform.position + new Vector3(0f, 2f, -3f), 
 				Quaternion.identity
 			);
 
-			var rb = coin.GetComponent<Rigidbody2D>();
+			var targetRb = target.GetComponent<Rigidbody2D>();
+			var coinRb = coin.GetComponent<Rigidbody2D>();			
+
+			Vector3 throwTarget = targetRb.position + targetRb.velocity * Time.deltaTime * anticipation;
+			throwTarget.z = 1;
 			
-			rb.AddForce((target.position - coin.transform.position).normalized * throwForce);
+			coinRb.AddForce(
+				(throwTarget - transform.position).normalized * throwForce
+			);
 		}
 	}
 

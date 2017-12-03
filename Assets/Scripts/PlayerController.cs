@@ -1,6 +1,5 @@
 ﻿
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
@@ -10,6 +9,10 @@ public class PlayerController : MonoBehaviour {
 	void Awake ()
 	{
 		characterMovement = GetComponent<CharacterMovement>();
+		if (CheckPointManager.instance.checkPointIsSet())
+		{
+			transform.position = CheckPointManager.instance.currentCheckPoint;
+		}
 	}
 	
 	void Update ()
@@ -42,8 +45,6 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		//float h = Input.GetAxis("Horizontal");
-
 		float h = 0;
 		
 		if (

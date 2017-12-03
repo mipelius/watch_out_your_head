@@ -17,6 +17,7 @@ public class StartOptions : MonoBehaviour {
 
 	public void LoadDelayed()
 	{
+		CheckPointManager.instance.Reset();
 		SceneManager.LoadScene (sceneToStart);
 	}
 }

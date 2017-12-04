@@ -20,7 +20,17 @@ public class CheckPointManager : MonoBehaviour {
 	public bool checkPointIsSet()
 	{
 		return checkpoints.Count > 0;
-	} 
+	}
+
+	public bool checkPointIsSet(Vector3 position)
+	{
+		foreach (var checkpoint in checkpoints)
+		{
+			if ((checkpoint - position).magnitude < 0.1) 
+				return true;
+		}
+		return false;
+	}
 	
 	public Vector3 currentCheckPoint
 	{
